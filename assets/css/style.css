@@ -1,0 +1,165 @@
+*{
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url('fonts/roboto-bold-webfont.woff2') format('woff2'),
+  url('fonts/roboto-bold-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Bold Italic';
+  src: url('fonts/roboto-bolditalic-webfont.woff2') format('woff2'),
+       url('fonts/roboto-bolditalic-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto Italic';
+  src: url('fonts/roboto-italic-webfont.woff2') format('woff2'),
+       url('fonts/roboto-italic-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('fonts/roboto-regular-webfont.woff2') format('woff2'),
+       url('fonts/roboto-regular-webfont.woff') format('woff');
+       font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Courier Prime Bold';
+  src: url('fonts/courier_prime_bold_italic-webfont.ttf') format('woff2'),
+  url('fonts/courier_prime_bold_italic-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+h3{
+  padding-top: 30px;
+}
+
+h3:after{
+  content: '';
+  height: 5px;
+  width: 200px;
+  background: #c3c3c3;
+  margin-top: 5px;
+  display: block;
+}
+
+.header{
+  background-color: #cfe5ef;
+  height: 150px;
+  font-family: 'Roboto Bold';
+}
+
+.container{
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.header__inner{
+  position: relative;
+}
+
+.header__logo{
+  float: left;
+  margin: 30px 0;
+
+}
+
+.navbar{
+  margin: 56px 40px;
+  float: left;
+  width: 405px;
+  position: relative;
+  padding: 0;
+}
+
+ul {
+  margin:0px;
+  padding:0px;
+}
+  
+li {
+  display: inline-block;
+  margin: 0px;
+}
+    
+li:hover > .submenu {
+  display: block;
+}
+
+.navbar a {
+  box-sizing: border-box;
+  color: black;
+  text-decoration:none;
+  padding:10px 10px;
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.submenu a {
+  text-transform: none;
+  background-color: #fff;
+}
+
+.topmenu li:hover{
+  background-color: #fff;
+}
+
+.submenu li {
+  display: block;
+  
+} 
+
+.submenu{
+  display:none;
+  position: absolute;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.button{
+  width: 80px;
+  height: 40px;
+  float: right;
+  background-color: #fff;
+  border-style: solid;
+  cursor: pointer;
+  margin: 55px 0;
+  font-family: 'Roboto Regular';
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color:#3184a9;
+}
+  
+.button:focus {
+  background-color: #fff;
+}
+
+.button:active {
+  background-color: #0e3b50;
+}
+
+.grid{
+  height: 45px;
+  background-color: #e2e2e2;
+  border: 1px solid #9f9f9f;
+}
