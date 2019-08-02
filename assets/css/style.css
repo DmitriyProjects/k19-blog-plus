@@ -1,57 +1,20 @@
-*{
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: 'Roboto Bold';
-  src: url('fonts/roboto-bold-webfont.woff2') format('woff2'),
-  url('fonts/roboto-bold-webfont.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto Bold Italic';
-  src: url('fonts/roboto-bolditalic-webfont.woff2') format('woff2'),
-       url('fonts/roboto-bolditalic-webfont.woff') format('woff');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Roboto Italic';
-  src: url('fonts/roboto-italic-webfont.woff2') format('woff2'),
-       url('fonts/roboto-italic-webfont.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Roboto Regular';
-  src: url('fonts/roboto-regular-webfont.woff2') format('woff2'),
-       url('fonts/roboto-regular-webfont.woff') format('woff');
-       font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Courier Prime Bold';
-  src: url('fonts/courier_prime_bold_italic-webfont.ttf') format('woff2'),
-  url('fonts/courier_prime_bold_italic-webfont.woff') format('woff');
-  font-weight: 700;
-  font-style: italic;
-}
-
-html, body{
+html,
+body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
-h3{
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+h3 {
   padding-top: 30px;
 }
 
-h3:after{
+h3:after {
   content: '';
   height: 5px;
   width: 200px;
@@ -60,28 +23,23 @@ h3:after{
   display: block;
 }
 
-.header{
+.header {
   background-color: #cfe5ef;
   height: 150px;
-  font-family: 'Roboto Bold';
+  font-weight: 700;
 }
 
-.container{
-  max-width: 1260px;
-  margin: 0 auto;
-}
 
-.header__inner{
+.header__inner {
   position: relative;
 }
 
-.header__logo{
+.header__logo {
   float: left;
   margin: 30px 0;
-
 }
 
-.navbar{
+.navbar {
   margin: 56px 40px;
   float: left;
   width: 405px;
@@ -89,25 +47,25 @@ h3:after{
   padding: 0;
 }
 
-ul {
-  margin:0px;
-  padding:0px;
+ul.topmenu {
+  margin: 0;
+  padding: 0;
 }
-  
-li {
+
+.topmenu li {
   display: inline-block;
   margin: 0px;
 }
-    
-li:hover > .submenu {
+
+.topmenu li:hover>.submenu {
   display: block;
 }
 
 .navbar a {
   box-sizing: border-box;
   color: black;
-  text-decoration:none;
-  padding:10px 10px;
+  text-decoration: none;
+  padding: 10px 10px;
   display: block;
   position: relative;
   text-transform: uppercase;
@@ -116,24 +74,25 @@ li:hover > .submenu {
 .submenu a {
   text-transform: none;
   background-color: #fff;
+  margin-left: -40px;
 }
 
-.topmenu li:hover{
+.topmenu li:hover {
   background-color: #fff;
 }
 
 .submenu li {
   display: block;
-  
-} 
 
-.submenu{
-  display:none;
-  position: absolute;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.button{
+.submenu {
+  display: none;
+  position: absolute;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.button {
   width: 80px;
   height: 40px;
   float: right;
@@ -141,15 +100,14 @@ li:hover > .submenu {
   border-style: solid;
   cursor: pointer;
   margin: 55px 0;
-  font-family: 'Roboto Regular';
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .button:hover {
-  background-color:#3184a9;
+  background-color: #3184a9;
 }
-  
+
 .button:focus {
   background-color: #fff;
 }
@@ -158,8 +116,99 @@ li:hover > .submenu {
   background-color: #0e3b50;
 }
 
-.grid{
+.grid {
   height: 45px;
   background-color: #e2e2e2;
   border: 1px solid #9f9f9f;
+}
+
+.review {
+  margin: 30px 0;
+}
+
+.review::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #c6c6c6;
+  width: 1260px;
+  margin: 20px auto;
+}
+
+.review:last-child:after {
+  display: none;
+}
+
+.review__name {
+  float: left;
+  font-weight: 700;
+}
+
+.review__date {
+  float: left;
+  color: rgba(0, 0, 0, 0.4)
+}
+
+.icon {
+  display: block;
+  float: left;
+  width: 17px;
+  margin-left: 30px;
+}
+
+.review__text {
+  display: block;
+  float: left;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.gallery_headline {
+  text-align: center;
+}
+
+.gallery_content {
+  width: 100%;
+  float: left;
+  margin-top: 50px;
+}
+
+.gallery_photo {
+  width: 260px;
+  height: 260px;
+  padding: 8px;
+  position: relative;
+}
+
+
+
+/* Дима, спасибо за подсказку =) */
+
+.gallery_photo:before,
+.gallery_photo:after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+}
+
+.gallery_photo::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.gallery_photo::after {
+  right: 0;
+  bottom: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.gallery_text {
+  font-size: 14px;
+  text-align: left;
+  font-weight: 700;
 }
